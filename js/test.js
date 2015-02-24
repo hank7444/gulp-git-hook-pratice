@@ -1,10 +1,9 @@
-"use strict";
+'use strict';
 
 var aa = function (a, b) {
     return a + b;
 };
-1234
-aa
-aaaa
-55555
 
+aa();
+
+// 隨邊加一些jshint過不去的參數就不能commit

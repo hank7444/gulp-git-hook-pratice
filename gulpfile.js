@@ -35,6 +35,9 @@ var rename = require("gulp-rename");
 var path = require('path');
 var fs = require('fs');
 
+var symlink = require('gulp-symlink'); //Again don't forget to install it
+
+
 var filefolder = {
     'js': 'js/**/*.js',
     'html': 'html/**/*.html',
@@ -100,6 +103,19 @@ gulp.task('js-hint', function() {
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(errorReporter());
 });
+
+gulp.task('hook', function () {
+  return gulp.src('.pre-commit')
+    .pipe(symlink('.git/hooks/pre-commit'));
+  
+  //.pipe(symlink('build/videos')) // Write to the destination folder
+  //  .pipe(symlink('build/videos/renamed-video.mp4')) // Write a renamed symlink to the destination folder
+  /*
+    return gulp.src('.pre-commit')
+        .pipe(gulp.dest('.git/hooks/pre-commit'));
+  */
+});
+
 
 gulp.task('css-beautify', function() {
     return gulp.src(filefolder.css)

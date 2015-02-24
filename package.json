@@ -1,0 +1,31 @@
+{
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "bin": {
+		"gulp": "./bin/gulp.js"
+  	},
+    "dependencies": {
+        "gulp": "*",
+        "gulp-util": "*",
+        "gulp-watch": "*",
+        "gulp-filter": "*",
+        "browser-sync": "*",
+        "gulp-plumber": "*",
+        "gulp-jshint": "*",
+        "jshint-stylish": "*",
+        "map-stream": "*",
+        "gulp-beautify": "*",
+        "gulp-w3cjs": "*",
+        "gulp-prettify": "*",
+        "gulp-csslint": "*",
+        "gulp-cssbeautify": "*",
+        "gulp-compass": "*",
+        "gulp-htmlbuild": "*",
+        "event-stream": "*",
+        "gulp-tap": "*",
+        "gulp-rename": "*",
+        "gulp-coffee": "*",
+        "path": "*"
+    }
+}
